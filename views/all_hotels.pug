@@ -1,0 +1,11 @@
+extends layout
+include mixins/_hotel
+include mixins/_search
+
+block content
+    +search
+    section.mt-5
+        .container
+            .row
+                each hotel in allHotels
+                    +hotel(hotel)

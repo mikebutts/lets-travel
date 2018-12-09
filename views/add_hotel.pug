@@ -1,0 +1,33 @@
+extends dash-layout
+
+block content
+    h2.page-title Add Hotel
+
+    form(action="" method="POST")
+        .form_input.form-group
+            label(for="hotel_name") Hotel name:
+            input(class="form-control" type="text" id="hotel_name" name="hotel_name" required)
+        .form_input.form-group
+            label(for="hotel_description") Hotel Description:
+            input(class="form-control" type="text" id="hotel_description" name="hotel_description" required)
+        .form_input.form-group
+            label(for="image") Image:
+            input(class="form-control" id="image" type="file" name="image" required)
+        .form_input.form-group
+            label(for="star_rating") Star Rating:
+            input(class="form-control" type="number" min="1" max="5" name="star_rating" required)
+        .form_input.form-group
+            label(for="country") Country:
+            input(class="form-control" id="country" type="text" name="country" required)
+        .form_input.form-group
+            label(for="cost_per_night") Cost Per Night:
+            input(class="form-control" id="cost_per_night" type="number" name="cost_per_night" required)
+        .form_input.form-group.row
+            .col-md-3
+                label(for="avaliable") Avaliable:
+                input(class="form-control" type="radio" id="avaliable" name="avaliable" value="true" )
+            .col-md-3
+                label(for="unavaliable") Unavaliable:
+                input(class="form-control" type="radio" id="avaliable" name="avaliable" value="false" )
+        .form_input.form-group
+            button(type="submit" class="btn btn-primary" ) Confirm

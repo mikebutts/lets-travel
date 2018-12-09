@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/nucleo-icons.css')
+    link(rel='stylesheet', href='/stylesheets/paper-kit.css')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', rel='stylesheet')
+  body
+    header
+      //- nav.navbar.navbar-expand-md.navbar-default
+      //-   a(href="/")
+      //-     img#logo(src="images/logo.png")
+      //-   ul
+      //-     li
+      //-       a(href="/sign-up") Sign Up
+      //-     li
+      //-       a(href="/login") Login
+      nav.navbar.navbar-expand-lg.fixed-top.navbar-transparent(color-on-scroll='300')
+        .container
+          .navbar-translate
+            a.navbar-brand(href='/') Let's Travel
+            button.navbar-toggler.navbar-toggler-right.navbar-burger(type='button', data-toggle='collapse', data-target='#navbarToggler', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-bar
+              span.navbar-toggler-bar
+              span.navbar-toggler-bar
+          #navbarToggler.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='../index.html')
+                  i.nc-icon.nc-layout-11
+                  | Components
+              li.nav-item
+                a.nav-link(href='../documentation/tutorial-components.html', target='_blank')
+                  i.nc-icon.nc-book-bookmark
+                  |   Documentation
+              li.nav-item
+                a.nav-link(rel='tooltip', title='Follow us on Twitter', data-placement='bottom', href='https://twitter.com/CreativeTim', target='_blank')
+                  i.fa.fa-twitter
+                  p.d-lg-none Twitter
+              li.nav-item
+                a.nav-link(rel='tooltip', title='Like us on Facebook', data-placement='bottom', href='https://www.facebook.com/CreativeTim', target='_blank')
+                  i.fa.fa-facebook-square
+                  p.d-lg-none Facebook
+              li.nav-item
+                a.nav-link(rel='tooltip', title='Follow us on Instagram', data-placement='bottom', href='https://www.instagram.com/CreativeTimOfficial', target='_blank')
+                  i.fa.fa-instagram
+                  p.d-lg-none Instagram
+              li.nav-item
+                a.nav-link(rel='tooltip', title='Star on GitHub', data-placement='bottom', href='https://www.github.com/CreativeTimOfficial', target='_blank')
+                  i.fa.fa-github
+                  p.d-lg-none GitHub
+                  
+
+    block content

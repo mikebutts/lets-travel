@@ -1,0 +1,45 @@
+extends layout
+
+block content
+      .page-header(style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , url('images/adventure.jpg') ")
+        .content-center
+          .container
+            .motto
+              form.row
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    label(for="destination") Destination
+                    input(class="form-control" type="text" id="destination" name="destination" required)
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    label(for="duration") Duration (nights)
+                    input(class="form-control" type="number" id="duration" name="duration" required)
+                
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    label(for="departure-date") Departure Date
+                    input(class="form-control" type="date" id="departure-date" name="dateOfDeparture" required)
+        
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    label(for="number-guests") Number of Guests
+                    input(class="form-control" type="number" id="number-guests" name="numberOfGuests" required)
+                
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    select(class="form-control" name="stars")
+                      option(Value="1") Min 1 Star
+                      option(Value="2") Min 2 Star
+                      option(Value="3") Min 3 Star
+                      option(Value="4") Min 4 Star
+                      option(Value="5") Min 5 Star
+
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    select(class="form-control" name="sort")
+                      option(value="1") Price: Low - High
+                      option(value="-1") Price: High - Low
+
+                .div.col-md-3
+                  .input_wrapper.form-group
+                    button(class="btn btn-outline-neutral" type="submit") Search

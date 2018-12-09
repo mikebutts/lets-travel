@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/nucleo-icons.css')    
+    link(rel='stylesheet', href='/stylesheets/paper-dashboard.css')
+  body
+    .wrapper
+        .sidebar(data-color='white', data-active-color='danger')
+       
+            .logo
+                a.simple-text.logo-mini(href='/')
+                    .logo-image-small
+                        img(src='images/logo.png')
+                a.simple-text.logo-normal(href='/')
+                | Let's Travel
+
+            .sidebar-wrapper
+                ul.nav
+                    li.active
+                        a(href="/admin/add_hotel") 
+                            i.nc-icon.nc-simple-add
+                            p Add new hotel
+                    li
+                        a(href="/admin/edit-remove") 
+                            i.nc-icon.nc-diamond
+                            p Edit / Remove Hotel
+                        a(href="/admin/orders")
+                            i.nc-icon.nc-paper
+                            p View Bookings    
+
+                    li.active-pro
+                        a(href="/")
+                            i.nc-icon.nc-spaceship
+                            p Back to Home   
+        .main-panel    
+            .content
+                .row
+                    .col-lg-12.col-md-12.col-sm-12
+                        .card.card-stats
+                            .card-body
+                                .row
+                                    .col-12
+                                        block content
+              

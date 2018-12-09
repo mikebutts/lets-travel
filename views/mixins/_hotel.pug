@@ -1,0 +1,21 @@
+mixin hotel(hotel)
+    
+    .col-md-3.col-md-4
+        .card
+            .card-image
+                a(href='#pablo')
+                    img.img(src=`${hotel.image}`)
+            .card-body
+                //- label.badge.badge-pill.badge-warning Travel
+                h4.card-title= hotel.hotel_name
+                hr
+                p= hotel.hotel_description
+                .card-footer
+                    .author
+                        i.fa.fa-heart(aria-hidden='true') 
+                        span= `Stars: ${hotel.star_rating}`
+                    .stats
+                        p Price per night: 
+                        i.fa.fa-heart(aria-hidden='true')
+                            = hotel.cost_per_night
+
