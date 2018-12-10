@@ -1,10 +1,10 @@
 mixin hotel(hotel)
     
-    .col-md-3.col-md-4
+    .li.glide__slide
         .card
             .card-image
                 a(href='#pablo')
-                    img.img(src=`${hotel.image}`)
+                    img.img(src=`/images/hotels/${hotel.image}`)
             .card-body
                 //- label.badge.badge-pill.badge-warning Travel
                 h4.card-title= hotel.hotel_name

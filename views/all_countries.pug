@@ -1,0 +1,16 @@
+extends layout
+include mixins/_search
+include mixins/_country
+
+block content
+    +search
+    section.mt-5
+        h2= title
+        .container
+            .row
+                each country in allCountries
+                    +country(country)
+                else
+                    li There are no countries
+                
+                    
