@@ -8,14 +8,18 @@ router.get('/', hotelController.homePageFilters);
 
 router.get('/all', hotelController.listAllHotels);
 router.get('/countries',hotelController.listAllCountries);
-router.get('/all/:name', function(req, res){
-  const name = req.params.name
-  res.render('all_hotels', {title: name});
-})
+router.get('/all/:hotelId',hotelController.hotelDetail);
 
 
 //Admin routes:
 router.get('/admin', hotelController.adminPage);
 router.get('/admin/add', hotelController.createHotelGet);
 router.post('/admin/add', hotelController.createHotelPost);
+router.get('/admin/edit-remove', hotelController.editRemoveGet);
+router.post('/admin/edit-remove', hotelController.editRemovePost);
+router.get('/admin/:hotelId/update', hotelController.updateHotelGet);
+router.post('/admin/:hotelId/update', hotelController.updateHotelPost);
+router.get('/admin/:hotelId/delete', hotelController.deleteHotelGet);
+router.post('/admin/:hotelId/delete', hotelController.deleteHotelPost);
+
 module.exports = router;

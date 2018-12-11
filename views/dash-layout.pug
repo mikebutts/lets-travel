@@ -5,7 +5,12 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/nucleo-icons.css')    
     link(rel='stylesheet', href='/stylesheets/paper-dashboard.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/css/toastr.min.css')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js')  
+    
   body
+
     .wrapper
         .sidebar(data-color='white', data-active-color='danger')
        
@@ -19,7 +24,7 @@ html
             .sidebar-wrapper
                 ul.nav
                     li.active
-                        a(href="/admin/add_hotel") 
+                        a(href="/admin/add") 
                             i.nc-icon.nc-simple-add
                             p Add new hotel
                     li

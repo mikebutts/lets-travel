@@ -3,7 +3,7 @@ mixin hotel(hotel)
     .li.glide__slide
         .card
             .card-image
-                a(href='#pablo')
+                a(href=`/all/${hotel._id}`)
                     img.img(src=`/images/hotels/${hotel.image}`)
             .card-body
                 //- label.badge.badge-pill.badge-warning Travel

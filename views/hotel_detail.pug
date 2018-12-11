@@ -1,0 +1,11 @@
+extends dash-layout
+include mixins/_hotel
+
+block content
+    .row
+        each hotel in hotelData
+            .col-md-6
+                a(href=`${hotel._id}/update` class="btn btn-small btn-success") Update Hotel
+                a(href=`${hotel._id}/delete` class="btn btn-small btn-error") Delete Hotel
+
+                +hotel(hotel)

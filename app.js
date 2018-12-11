@@ -1,5 +1,8 @@
 var createError = require('http-errors');
-var express = require('express');
+var express = require('express')    
+  ,flash = require('connect-flash')
+  ,session = require('express-session')
+  ,toastr = require('express-toastr');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -22,10 +25,25 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true
+}));
+app.use(flash());
+
+// Load express-toastr
+// You can pass an object of default options to toastr(), see example/index.coffee
+app.use(toastr());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
+app.use(function (req, res, next)
+{
+    res.locals.toasts = req.toastr.render()
+    next()
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

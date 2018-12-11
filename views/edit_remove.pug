@@ -1,0 +1,18 @@
+extends dash-layout
+
+block content
+    h2.page-title= title
+
+    form(action="" method="POST")
+        .form_input.form-group
+            label(for="hotel_id") Hotel id:
+            input(class="form-control" type="text" id="hotel_id" name="hotel_id" )
+        p OR:
+        .form_input.form-group
+            label(for="hotel_name") Hotel name:
+            input(class="form-control" type="text" id="hotel_name" name="hotel_name" )
+
+
+        .form_input.form-group
+            button(type="submit" class="btn btn-primary" ) Confirm
+    

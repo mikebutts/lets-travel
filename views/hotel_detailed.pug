@@ -1,0 +1,29 @@
+extends layout
+include mixins/_hotel
+
+block content
+    .page-header.page-header-xs(data-parallax='true', style="background-image: url('/images/travel.jpg');")
+    .filter
+        each hotel in hotelData
+            .main
+                .section
+                    .container
+                        .row.title-row
+                            .col-md-2
+                            h2.shop= hotel.hotel_name
+                        .row
+                            .col-md-7.col-sm-6
+                                img(class="img-rounded img-responsive" src=`/images/hotels/${hotel.image}`)
+                            .col-md-5.col-sm-6
+                                h3= hotel.country
+                                h4.price
+                                    strong= `$${hotel.cost_per_night}/night`
+                                hr
+                                p
+                                    =`| ${hotel.hotel_description}`
+                                .row.mt-3
+                                    .col-md-6 
+                                        = hotel.star_rating 
+                                        i.fa.fa-star
+                                    .col-md-6
+                                        span.badge.badge-pill.badge-warning Avaliable                   

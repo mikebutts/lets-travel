@@ -8,6 +8,7 @@ html
     link(href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/glide.core.min.css')
   body
+    = toasts
     header
       //- nav.navbar.navbar-expand-md.navbar-default
       //-   a(href="/")
@@ -54,3 +55,7 @@ html
                   
 
     block content
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap-selectpicker.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/paper-kit.min.js')
