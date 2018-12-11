@@ -1,0 +1,13 @@
+extends layout
+include mixins/_hotel
+include mixins/_search
+
+block content
+    .page-header.page-header-xs(style=`background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/countries/${country}.jpg) `)
+        h2 texttt
+    section.mt-5
+        
+        .container
+            .row
+                each hotel in hotelData
+                    +hotel(hotel)

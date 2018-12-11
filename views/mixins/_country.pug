@@ -1,13 +1,13 @@
 mixin country(country)
-
+    
  
-
-        .card(data-background='image', style=`background-image: url(/images/countries/${country._id}.jpg)`)
+    .col-md-4
+        .card(data-background='image', style=`background-image: url(/images/countries/${country}.jpg)`)
             .card-body
                 
-                h3.card-title #{country._id}
+                h3.card-title #{country}
                 hr
                 .card-footer
-                a.btn.btn-success.btn-round(href=`/countries/${country._id}`) 
+                a.btn.btn-success.btn-round(href=`/countries/${country}`) 
                     i.fa.fa-file-pdf-o(aria-hidden='true')
                     |  See Hotels

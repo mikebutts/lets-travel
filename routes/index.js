@@ -8,6 +8,7 @@ router.get('/', hotelController.homePageFilters);
 
 router.get('/all', hotelController.listAllHotels);
 router.get('/countries',hotelController.listAllCountries);
+router.get('/countries/:country', hotelController.getHotelCountry);
 router.get('/all/:hotelId',hotelController.hotelDetail);
 
 

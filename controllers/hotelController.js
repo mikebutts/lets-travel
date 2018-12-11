@@ -51,6 +51,15 @@ exports.hotelDetail = async (req, res, next) => {
     }
 }
 
+exports.getHotelCountry = async (req, res, next) => {
+    try {
+        const country = req.params.country;
+        const hotelData = await Hotel.find({ country: country});
+        res.render('hotels_by_country', {title: `Lets Travel | ${country}`, hotelData, country})
+    }catch(error){
+        next(error)
+    }
+}
 
 // Admin page
 exports.adminPage = (req, res) => {
@@ -143,3 +152,4 @@ exports.deleteHotelPost = async (req, res, next) => {
         next(error)
     }
 }
+
