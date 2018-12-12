@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express')    
   ,flash = require('connect-flash')
@@ -17,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 //setup mongoose connect
-mongoose.connect('mongodb://hoteladmin:playme11!!@ds127644.mlab.com:27644/letstravel');
+mongoose.connect(process.env.DB);
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (error) => console.error(error.message));
 

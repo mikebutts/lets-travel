@@ -51,7 +51,7 @@ block content
         .glide
           .glide__track(data-glide-el='track')
             ul.row.glide__slides
-              each hotel in hotels
+              each hotel in filteredHotels
                 +hotel(hotel)
 
           //- .glide__arrows(data-glide-el='controls')
@@ -71,7 +71,7 @@ block content
         .glide#glidetwo
           .glide__track(data-glide-el='track')
             ul.row.glide__slides
-              each country in countries
+              each country in filteredCountries
                 +country(country)
 
           .glide__arrows(data-glide-el='controls')
