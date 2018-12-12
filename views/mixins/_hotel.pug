@@ -4,7 +4,7 @@ mixin hotel(hotel)
         .card
             .card-image
                 a(href=`/all/${hotel._id}`)
-                    img.img(src=`/images/hotels/${hotel.image}`)
+                    img.img(src=`https://res.cloudinary.com/dpmmpzfrw/image/upload/${hotel.image}.jpg`)
             .card-body
                 //- label.badge.badge-pill.badge-warning Travel
                 h4.card-title= hotel.hotel_name
